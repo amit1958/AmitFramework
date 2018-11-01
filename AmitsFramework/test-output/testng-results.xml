@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="32621" started-at="2018-10-11T23:44:11Z" finished-at="2018-10-11T23:44:44Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="32621" started-at="2018-10-11T23:44:11Z" finished-at="2018-10-11T23:44:44Z">
+      <class name="org.com.loginPage">
+        <test-method status="PASS" signature="startUp()[pri:0, instance:org.com.loginPage@4667ae56]" name="startUp" is-config="true" duration-ms="15040" started-at="2018-10-11T23:44:11Z" finished-at="2018-10-11T23:44:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startUp -->
+        <test-method status="PASS" signature="myBlankloginPage()[pri:0, instance:org.com.loginPage@4667ae56]" name="myBlankloginPage" duration-ms="14795" started-at="2018-10-11T23:44:26Z" finished-at="2018-10-11T23:44:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- myBlankloginPage -->
+        <test-method status="PASS" signature="close()[pri:0, instance:org.com.loginPage@4667ae56]" name="close" is-config="true" duration-ms="2747" started-at="2018-10-11T23:44:41Z" finished-at="2018-10-11T23:44:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- org.com.loginPage -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
