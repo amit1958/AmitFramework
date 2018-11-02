@@ -6,8 +6,9 @@
       <class name="org.com.loginPage">
         <methods>
           <include name="startUp"/>
-          <include name="myBlankloginPage"/>
-          <include name="close"/>
+          <include name="myloginPageInvalidUName"/>
+          <include name="myvalidloginPage"/>
+          <include name="failedscreenshot"/>
         </methods>
       </class> <!-- org.com.loginPage -->
     </classes>

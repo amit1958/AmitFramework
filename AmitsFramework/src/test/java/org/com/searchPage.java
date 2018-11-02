@@ -31,7 +31,7 @@ public class searchPage extends origin  {
 	Assert.assertEquals(url, currenturl);
 	}
 	@Test
-	public void myValidSearchwithLogin(){
+	public void myValidSearchwithLogin() throws InterruptedException{
 		
 		login.myvalidloginPage();
 		driver.findElement(By.id("search")).sendKeys("exide");
@@ -41,7 +41,7 @@ public class searchPage extends origin  {
 	Assert.assertEquals(url, currenturl);
 	}
 	@Test
-	public void myInValidSearchwithLogin(){
+	public void myInValidSearchwithLogin() throws InterruptedException{
 		login.myvalidloginPage();
 		driver.findElement(By.id("search")).sendKeys("exide");
 		driver.findElement(By.id("searchsubmit")).click();
@@ -49,5 +49,6 @@ public class searchPage extends origin  {
 		String url ="http://qa.lockthedeal.com/lakshyaCatalog/index?id=&query=exide";
 	Assert.assertEquals(url, currenturl);
 	}
-	}
+	
+}
 

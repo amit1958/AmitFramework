@@ -7,14 +7,20 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.apache.commons.io.FileUtils;
 import org.com.*;
+
+import com.google.common.reflect.ImmutableTypeToInstanceMap;
 
 public class origin {
 	public static WebDriver driver;
@@ -49,6 +55,27 @@ public class origin {
 		
 	}
 	@AfterMethod
+	public void failedscreenshot(ITestResult result){
+		if(ITestResult.FAILURE == result.getStatus()){
+			 
+				try {
+					File src= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+				  // now copy the  screenshot to desired location using copyFile method
+				 
+				 FileUtils.copyFile(src, new File("C:\\Users\\amit.sharma\\git\\repository-AmitFramework\\AmitsFramework" +fileName+ System.currentTimeMillis()+".png"));
+				       
+				}
+				 
+				catch (IOException e)
+				 
+				{
+				 
+					e.printStackTrace();
+				 
+				    }
+			 }
+		}
+	String fileName;
 	public void close()
 	{
 		driver.close();
