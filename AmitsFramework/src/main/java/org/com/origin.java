@@ -27,21 +27,20 @@ public class origin {
 	public  void startUp() throws IOException{
 	
 		try{
-			
-			System.out.println("========test2=========>>");
-			File myfile = new File("C:\\Users\\amit.sharma\\workspace\\AmitsFramework\\my.properties");
+			File myfile = new File("C:\\Users\\amit.sharma\\git\\repository-AmitFramework\\AmitsFramework\\my.properties");
 			System.out.println("exists:==> "+myfile.exists());
 			FileInputStream myInput= new FileInputStream(myfile);
-			System.out.println("myInput:==> "+myInput);
 			pr.load(myInput);
-			System.out.println("=======test1================>");
-			System.setProperty("webdriver.gecko.driver", pr.getProperty("ffdriverpath"));
+			//System.setProperty("webdriver.gecko.driver", pr.getProperty("ffdriverpath"));
+			System.setProperty("webdriver.gecko.driver", pr.getProperty("ffdriverpathupdated"));
+			System.out.println("before calling the url");
 			driver= new FirefoxDriver();
+			System.out.println("After calling the ffdriver");
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			driver.manage().window().maximize();
+			//driver.manage().window().maximize();
 			driver.get(pr.getProperty("url"));
+			System.out.println("url is " +pr.getProperty("url"));
 			
-			System.out.println("test3");
 		}catch(Exception e){
 			e.printStackTrace();
 		}
@@ -52,8 +51,7 @@ public class origin {
 	@AfterMethod
 	public void close()
 	{
-		driver.quit();
-	}
-	
+		driver.close();
+	}	
 
 }
