@@ -59,7 +59,6 @@ public class loginPage extends origin{
 			e.printStackTrace();
 		}
 		
-		
 	
 		
 	}
