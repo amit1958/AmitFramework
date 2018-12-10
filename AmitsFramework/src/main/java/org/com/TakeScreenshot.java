@@ -20,7 +20,7 @@ public class TakeScreenshot extends origin {
 		try {
 		  // now copy the  screenshot to desired location using copyFile method
 		 
-		 FileUtils.copyFile(src, new File("C:\\Users\\amit.sharma\\git\\repository-AmitFramework\\AmitsFramework"+filename + System.currentTimeMillis()+".png"));
+		 FileUtils.copyFile(src, new File("C:\\Users\\amit.sharma\\git\\repository-AmitFramework\\AmitsFramework" +filename + System.currentTimeMillis()+".png"));
 		       
 		}
 		 

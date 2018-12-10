@@ -1,5 +1,8 @@
 package org.com;
 
+import java.awt.List;
+import java.util.ArrayList;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.PageLoadStrategy;
@@ -32,8 +35,10 @@ public class loginPage extends origin{
 			Thread.sleep(1000);
 			WebElement login1= driver.findElement(By.id("submit"));
 			login1.click();
-			String expect = pr.getProperty("logininstruction");
-			Assert.assertEquals(driver.findElement(By.xpath("//*[@id='loginForm']/div[1]/div")).getText(), expect);
+			TestAssert mblp= new TestAssert();
+			mblp.testAssertmyBlankLoginPage();
+//			String expect = pr.getProperty("logininstruction");
+//			Assert.assertEquals(driver.findElement(By.xpath("//*[@id='loginForm']/div[1]/div")).getText(), expect);
 			fileName ="myBlankloginPage";
 			/*
 			ITestResult result = Reporter.getCurrentTestResult();
@@ -71,8 +76,10 @@ public class loginPage extends origin{
 		driver.findElement(By.id("submit")).click();
 		myWait= new WebDriverWait(driver, 10);
 		myWait.until(ExpectedConditions.titleContains(pr.getProperty("loginexpected")));
+		TestAssert mblp= new TestAssert();
+		mblp.testAssertmyvalidloginPage();
 		String expect = pr.getProperty("loginexpected");
-		Assert.assertEquals(driver.getTitle(), expect);	
+//		Assert.assertEquals(driver.getTitle(), expect);	
 //		sc= new TakeScreenshot();
 //		sc.takesScreenshot("myvalidloginPage");
 //		Thread.sleep(5000);
@@ -89,8 +96,10 @@ public class loginPage extends origin{
 		WebElement password= driver.findElement(By.id("password"));
 		password.sendKeys(pr.getProperty("password"));
 		driver.findElement(By.id("submit")).click();
-		String expect = pr.getProperty("nonexistinguser");
-		Assert.assertEquals(driver.findElement(By.xpath("//*[@id='messagingDiv']/div")).getText(), expect);	
+		TestAssert mblp= new TestAssert();
+		mblp.testAssertmyloginPageInvalidUName();
+//		String expect = pr.getProperty("nonexistinguser");
+//		Assert.assertEquals(driver.findElement(By.xpath("//*[@id='messagingDiv']/div")).getText(), expect);	
 //		sc= new TakeScreenshot();
 //		sc.takesScreenshot("myloginPageInvalidUName");
 //		Thread.sleep(5000);
@@ -106,14 +115,15 @@ public class loginPage extends origin{
 		WebElement password= driver.findElement(By.id("password"));
 		password.sendKeys(pr.getProperty("invalidpassword"));
 		driver.findElement(By.id("submit")).click();
-		String expect = pr.getProperty("nonexistinguser");
-		Assert.assertEquals(driver.findElement(By.xpath("//*[@id='messagingDiv']/div")).getText(), expect);	
+		TestAssert mblp= new TestAssert();
+		mblp.testAssertmyloginPageInvalidPassworde();
+//		String expect = pr.getProperty("nonexistinguser");
+//		Assert.assertEquals(driver.findElement(By.xpath("//*[@id='messagingDiv']/div")).getText(), expect);	
 //		sc= new TakeScreenshot();
 //		sc.takesScreenshot("myloginPageInvalidPassword");
 		fileName ="myloginPageInvalidPassword";
 	
-		
-		
+	
 	}
 
 }

@@ -3,14 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="org.com.loginPage">
+      <class name="org.com.LinkCrawling">
         <methods>
+          <include name="findAllLinks"/>
           <include name="startUp"/>
-          <include name="myloginPageInvalidUName"/>
-          <include name="myvalidloginPage"/>
           <include name="failedscreenshot"/>
         </methods>
-      </class> <!-- org.com.loginPage -->
+      </class> <!-- org.com.LinkCrawling -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
