@@ -2,31 +2,31 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="87082" started-at="2018-11-27T09:16:57Z" finished-at="2018-11-27T09:18:24Z">
+  <suite name="Default suite" duration-ms="15364" started-at="2018-12-24T11:02:53Z" finished-at="2018-12-24T11:03:08Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="87082" started-at="2018-11-27T09:16:57Z" finished-at="2018-11-27T09:18:24Z">
-      <class name="org.com.LinkCrawling">
-        <test-method status="PASS" signature="startUp()[pri:0, instance:org.com.LinkCrawling@598067a5]" name="startUp" is-config="true" duration-ms="11072" started-at="2018-11-27T09:16:57Z" finished-at="2018-11-27T09:17:08Z">
+    <test name="Default test" duration-ms="15364" started-at="2018-12-24T11:02:53Z" finished-at="2018-12-24T11:03:08Z">
+      <class name="com.ltd.testcases.VerifyLoginTest">
+        <test-method status="PASS" signature="startUp()[pri:0, instance:com.ltd.testcases.VerifyLoginTest@31ef45e3]" name="startUp" is-config="true" duration-ms="10989" started-at="2018-12-24T11:02:53Z" finished-at="2018-12-24T11:03:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startUp -->
-        <test-method status="PASS" signature="findAllLinks()[pri:0, instance:org.com.LinkCrawling@598067a5]" name="findAllLinks" duration-ms="75962" started-at="2018-11-27T09:17:08Z" finished-at="2018-11-27T09:18:24Z">
+        <test-method status="PASS" signature="startLoginValidation()[pri:0, instance:com.ltd.testcases.VerifyLoginTest@31ef45e3]" name="startLoginValidation" duration-ms="4330" started-at="2018-12-24T11:03:04Z" finished-at="2018-12-24T11:03:08Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- findAllLinks -->
-        <test-method status="PASS" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:org.com.LinkCrawling@598067a5]" name="failedscreenshot" is-config="true" duration-ms="3" started-at="2018-11-27T09:18:24Z" finished-at="2018-11-27T09:18:24Z">
+        </test-method> <!-- startLoginValidation -->
+        <test-method status="PASS" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:com.ltd.testcases.VerifyLoginTest@31ef45e3]" name="failedscreenshot" is-config="true" duration-ms="9" started-at="2018-12-24T11:03:08Z" finished-at="2018-12-24T11:03:08Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=findAllLinks status=SUCCESS method=LinkCrawling.findAllLinks()[pri:0, instance:org.com.LinkCrawling@598067a5] output={null}]]]>
+                <![CDATA[[TestResult name=startLoginValidation status=SUCCESS method=VerifyLoginTest.startLoginValidation()[pri:0, instance:com.ltd.testcases.VerifyLoginTest@31ef45e3] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- failedscreenshot -->
-      </class> <!-- org.com.LinkCrawling -->
+      </class> <!-- com.ltd.testcases.VerifyLoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
