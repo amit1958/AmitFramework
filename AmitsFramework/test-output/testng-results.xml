@@ -2,31 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="15364" started-at="2018-12-24T11:02:53Z" finished-at="2018-12-24T11:03:08Z">
+  <suite name="Default suite" duration-ms="21104" started-at="2018-12-26T06:18:07Z" finished-at="2018-12-26T06:18:28Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="15364" started-at="2018-12-24T11:02:53Z" finished-at="2018-12-24T11:03:08Z">
-      <class name="com.ltd.testcases.VerifyLoginTest">
-        <test-method status="PASS" signature="startUp()[pri:0, instance:com.ltd.testcases.VerifyLoginTest@31ef45e3]" name="startUp" is-config="true" duration-ms="10989" started-at="2018-12-24T11:02:53Z" finished-at="2018-12-24T11:03:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startUp -->
-        <test-method status="PASS" signature="startLoginValidation()[pri:0, instance:com.ltd.testcases.VerifyLoginTest@31ef45e3]" name="startLoginValidation" duration-ms="4330" started-at="2018-12-24T11:03:04Z" finished-at="2018-12-24T11:03:08Z">
+    <test name="Default test" duration-ms="21104" started-at="2018-12-26T06:18:07Z" finished-at="2018-12-26T06:18:28Z">
+      <class name="com.ltd.testcases.VerifyLoginTestUsingPageFactory">
+        <test-method status="PASS" signature="startLoginValidation()[pri:0, instance:com.ltd.testcases.VerifyLoginTestUsingPageFactory@685cb137]" name="startLoginValidation" duration-ms="21057" started-at="2018-12-26T06:18:07Z" finished-at="2018-12-26T06:18:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startLoginValidation -->
-        <test-method status="PASS" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:com.ltd.testcases.VerifyLoginTest@31ef45e3]" name="failedscreenshot" is-config="true" duration-ms="9" started-at="2018-12-24T11:03:08Z" finished-at="2018-12-24T11:03:08Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=startLoginValidation status=SUCCESS method=VerifyLoginTest.startLoginValidation()[pri:0, instance:com.ltd.testcases.VerifyLoginTest@31ef45e3] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- failedscreenshot -->
-      </class> <!-- com.ltd.testcases.VerifyLoginTest -->
+      </class> <!-- com.ltd.testcases.VerifyLoginTestUsingPageFactory -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
