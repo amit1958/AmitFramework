@@ -11,6 +11,7 @@ public class TestAssert extends origin {
 	}
 	public void testAssertmyvalidloginPage(){
 		String expect = pr.getProperty("loginexpected");
+		System.out.println("expected text is " +expect);
 		Assert.assertEquals(driver.getTitle(), expect);	
 	}
 	public void testAssertmyloginPageInvalidUName(){

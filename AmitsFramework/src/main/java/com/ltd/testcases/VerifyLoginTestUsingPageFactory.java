@@ -1,5 +1,6 @@
 package com.ltd.testcases;
 
+import org.com.TestAssert;
 import org.com.origin;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -7,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import Utility.BrowserFactory;
+import Utility.ReadExcelFilePOI;
 
 import com.ltd.pom.LoginPage;
 import com.ltd.pom.LoginPageUsingPageFactory;
@@ -23,13 +25,23 @@ public class VerifyLoginTestUsingPageFactory {
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.lockthedeal.com/login");*/
+		
+		ReadExcelFilePOI excel= new ReadExcelFilePOI();
+		excel.readExcel("C:/Users/amit.sharma/git/Old-cf/Old-cf/TestData.xlsx");
+		String username= excel.getData(0, 0, 0);
+		String password =excel.getData(0, 0, 1);
+		System.out.println(username +","+ password);
+		
 		LoginPageUsingPageFactory myloginF= PageFactory.initElements(driver, LoginPageUsingPageFactory.class);
-		myloginF.locktheDealLogin("9811854502", "2124");
+		myloginF.locktheDealLogin(username, password);
 		/*
 		mylogin.typeusername("9811854502");
 		mylogin.typePassword("2124");
 		mylogin.submitButton();
 		*/
+		
+		TestAssert myassert= new TestAssert();
+		myassert.testAssertmyvalidloginPage();
 	}
 	
 

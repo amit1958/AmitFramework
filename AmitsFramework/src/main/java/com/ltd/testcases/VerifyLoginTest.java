@@ -22,6 +22,7 @@ public class VerifyLoginTest extends origin {
 		mylogin.typePassword("2124");
 		mylogin.submitButton();
 		*/
+		
 	}
 	
 
